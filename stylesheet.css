@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'brandon_grotesquemedium';
+    src: url('brandon_med-webfont.eot');
+    src: url('brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('brandon_med-webfont.woff2') format('woff2'),
+         url('brandon_med-webfont.woff') format('woff'),
+         url('brandon_med-webfont.ttf') format('truetype'),
+         url('brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	font-family: 'brandon_grotesquemedium','brandon grotesque','Helvetica Neue', sans-serif;
+	overflow-x: hidden;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+	[class*="col-"] {
+    width: 100%;}
+}
+a:link, a:visited {
+	border: 2px solid black;
+	color: black;
+	text-decoration: none;
+	padding: 0em 0.2em;
+	display: inline-block;
+	font-size: 1em;
+	line-height: 20px;
+	text-align: center;
+	float: top;
+}
+
+#top {
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+#except {
+	top: 1%;
+	right: 1%;
+	position: absolute;
+	display: inline;
+}
+#overlay .square {
+	float: right;
+	margin-top: -2.5%;
+	display: inline;
+}
+input{
+  display:none;
+}
+h1 {
+	font-size: 5em;
+	text-align: center;
+	margin: 13% auto 10% auto;
+}
+#opcl {
+	margin: auto;
+	text-align: center;
+	font-size: 1.3em;
+	padding-bottom: 90px;
+}
+
+#tomorrowanswer {
+	padding: auto;
+	margin-top: 100px;
+}
+
+#thissunday {
+	padding: auto;
+	margin-top: 100px;
+}
+.easter {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.easter #cat {
+	position: absolute;
+	top: -100px;
+	left: 10%;
+	width: 80%;
+	height: 60%;
+}
+
+.break {
+	padding-bottom: 3000px;
+}
+#overlay {
+	font-size: 1.3em;
+}
+ul {
+	margin: 0;
+	padding-top: 0;
+	padding-left: 30%;
+	padding-bottom: 110px;
+	list-style-type: none;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.row #answer {
+	text-align: center;
+	margin-top: 0;
+	font-size: .7em;
+	line-height: 20px;
+	padding-bottom: 30px;
+}
+
+.cat2 #elevenanswer {
+	text-align: center;
+	margin-top: 15%;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+.cat2 #wednesdayanswer {
+	text-align: center;
+	margin-top: 15%;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+.cat2 #monwedanswer {
+	text-align: center;
+	margin-top: 15%;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+
+.cat2 #irreg {
+	text-align: center;
+	padding-top: 7%;
+	font-size: 1em;
+	margin-bottom: 45px;
+}
+
+
+#clockdiv {
+font-size:30px;
+margin: 2% auto 2% auto;
+color:black;
+text-align: center;
+display: inline-block, none;
+}
+
+#clockdiv > div{
+	display: inline-block;	
+}
+
+.tomorrow {
+	display: block;
+	margin-left: 0px;
+	text-align: center;
+	margin-top: 0px;
+	font-size: 1.2em;
+	bottom: 0px;
+}
+.emart {
+	margin-top: 0px;
+	padding-bottom: 30px;
+	text-align: center;
+	font-size: 1.5em;
+}
+.contact {
+	margin-top: 0px;
+	text-align: center;
+	font-size: 1em;
+}
+.lastline {
+	margin-top: -75px;
+	text-align: center;
+	font-size: .8em;
+}

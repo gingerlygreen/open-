@@ -1,0 +1,255 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<title>Is Homeplus Open? : find out if Homeplus is open today.</title>
+<meta name="description" content="Make sure your local Homeplus, Emart, Lotte Mart, or CostCo is open before leaving your room. You can find out if they are open today or if they are closed tomorrow.">
+<meta name="keywords" content="homeplus emart costco open today tomorrow">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="dnLjDibSQBFj6OczY6XXO5P-PJZ-CJH0agRPFU0zWbo" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72852006-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<div id="top"></div>
+<div id="fullpage">
+<input type="checkbox" id="text"></input>
+<div id="except">
+	<a href="#exception" href=”/goal/example” onclick=”javascript:pageTracker._trackPageview (‘example’);”target=”blank”>except<br>these<br>locations<br>outside<br>Seoul</a>
+</div>
+<h1 id="todayanswer"></h1>
+<div id="clockdiv">
+  <div>
+    <span class="hours"></span>
+  </div>
+  <div>
+    <span class="minutes"></span>
+  </div>
+  <div>
+    <span class="seconds"></span>
+  </div>
+</div>
+<p id="opcl"></p>
+<p class="col-12 tomorrow">AND THIS COMING SUNDAY, THEY ARE</p>
+<h1 class="col-12" id="thissunday"></h1>
+<p class="col-12 emart">(and so are E-Mart, Lotte Mart and CostCo in Seoul)</p>
+<p class="col-12 contact">for suggestions or comments, please email jake@ishomeplusopen.com</p>
+<div class="break"></div>
+<div class="col-12 easter">
+	<img id="cat" src="https://secure.static.tumblr.com/a41e4cc093d6bd7eea9405d0d554612a/xx2bnxs/2BZngogwe/tumblr_static_525gdiu9qccgwc44cgowk88so_640_v2.jpg">
+</div>
+<div class="break"></div>
+<p class="col-12 emart">except these locations outside Seoul</p>
+<div id="overlay">
+	<div class="square">
+		<a id="exception"></a>
+		<a href="#top">X</a>
+	</div>
+	<div class="row">
+		<div class="col-3 cat2">
+			<p id="elevenanswer"></p>
+			<p id="answer">THEY CLOSE AT 11PM</p>
+			<ul>
+				<li>busan jeonggwan</li>
+				<li>dongchon</li>
+				<li>dong gimhae</li>
+				<li>gayang</li>
+				<li>gyesan</li>
+				<li>incheon sungui</li>
+				<li>jangrim</li>
+				<li>mokpo</li>		
+				<li>ohchang</li>				
+				<li>seo suwon</li>
+				<li>sihwa</li>
+				<li>woncheon</li>
+			</ul>
+		</div>
+		<div class="col-3 cat2">
+			<p id="wednesdayanswer"></p>
+			<p id="answer">THEY CLOSE ON SECOND AND FOURTH WEDNESDAYS</p>
+			<ul>
+				<li>andong</li>
+				<li>boryeong</li>
+				<li>gangreung</li>	
+				<li>gimpo</li>
+				<li>gyeryong</li>
+				<li>mungyeong</li>
+				<li>namyangju jinjeop</li>
+				<li>osan</li>
+				<li>pungmu</li>
+			</ul>
+		</div>
+		<div class="col-3 cat2">
+			<p id="monwedanswer"></p>
+			<p id="answer">THEY CLOSE ON SECOND AND FOURTH WEDNESDAYS</p>
+			<ul>
+				<li>anyang</li>
+				<li>goyang terminal</li>
+				<li>gumi</li>
+				<li>gyeonggi hanam</li>
+				<li>gyeongsan</li>
+				<li>ilsan</li>
+				<li>kintex</li>
+				<li>paju munsan</li>				
+				<li>pocheon songwu</li>	
+				<li>pyungchon</li>
+				<li>wonju</li>															
+			</ul>
+		</div>		
+		<div class="col-3 cat2">
+			<p id="irreg">MAYBE.</p>
+			<p id="answer">THESE LOCATIONS HAVE IRREGULAR CLOSING DAYS</p>		
+			<ul>
+				<li>ansan</li>
+				<li>ansan gojan</li>
+				<li>ansan seonbu</li>
+				<li>nonsan</li>
+				<li>seogwipo</li>
+				<li>ulsan</li>
+				<li>ulsan namgu</li>
+				<li>ulsan bukgu</li>
+				<li>yeongju</li>
+			</ul>
+		</div>
+	</div>	
+<p class="col-12 lastline">if your location isn't here, it has the same schedule as Seoul.</p>
+</div>
+<script>
+var d = new Date();
+var currHours = d.getHours();
+var n = d.toString();
+var tokens = n.split(/[ ,]/);
+var nth = Math.ceil(tokens[2]/7);
+function initDay() {
+if (tokens[0] === "Sun" || currHours <= 9) {
+	if (nth === 2 || nth === 4) {
+		var yn = "NO"
+	}
+	if (currHours <=9) {
+		var yn = "NO"
+	}
+	if (currHours > 9 && nth !== 4 && nth !== 2) {
+		var yn = "YES"
+	}
+}
+else {
+	var yn = "YES"
+}
+if (yn === "NO" || currHours >= 23 || currHours <= 9) {
+	document.getElementById("elevenanswer").innerHTML = "THESE LOCATIONS ARE CLOSED NOW"
+}
+else {
+	document.getElementById("elevenanswer").innerHTML = "THESE LOCATIONS ARE OPEN NOW"
+}
+if (tokens[0] === "Mon" || tokens[0] === "Wed" || currHours <=9) {
+	if (nth === 2 && tokens[0] === "Mon") {
+		var yn3 = "THESE LOCATIONS ARE CLOSED NOW"
+	}
+	if (nth === 4 && tokens[0] === "Wed") {
+		var yn3 = "THESE LOCATIONS ARE CLOSED NOW"
+	}
+	if (currHours <=9) {
+		var yn3 = "THESE LOCATIONS ARE CLOSED NOW"
+	}
+	if (currHours > 9 && nth !== 4 && nth !== 2) {
+		var yn3 = "THESE LOCATIONS ARE OPEN NOW"
+	}
+}
+else {
+	var yn3 = "THESE LOCATIONS ARE OPEN NOW"
+}
+document.getElementById("monwedanswer").innerHTML = yn3;
+
+if (yn === "NO") {
+      document.getElementById("opcl").innerHTML = "UNTIL OPENING"
+    }
+    else {
+    	document.getElementById("opcl").innerHTML = "UNTIL CLOSING"
+    }
+document.getElementById("todayanswer").innerHTML = yn;
+}
+if (tokens[0] === "Wed" || currHours <=9) {
+	if (nth === 2 || nth === 4) {
+		var yn2 = "THESE LOCATIONS ARE CLOSED NOW"
+	}
+	if (currHours <=9) {
+		var yn2 = "THESE LOCATIONS ARE CLOSED NOW"
+	}
+	if (currHours > 9 && nth !== 4 && nth !== 2) {
+		var yn2 = "THESE LOCATIONS ARE OPEN NOW"
+	}
+}
+else {
+	var yn2 = "THESE LOCATIONS ARE OPEN NOW"
+}
+document.getElementById("wednesdayanswer").innerHTML = yn2;
+var td = new Date(); 
+var nextSunday= new Date(td.getFullYear(),td.getMonth(),td.getDate()+(7-td.getDay())) 
+var y = nextSunday.toString();
+	var tokenssun = y.split(/[ ,]/);
+	var nthsun = Math.ceil(tokenssun[2]/7);
+	if (nthsun === 2 || nthsun === 4) {
+		var comingsundayanswer = "CLOSED"
+	}
+	if (nthsun !== 4 && nthsun !== 2) {
+		var comingsundayanswer = "OPEN"
+	}
+	else {
+	var comingsundayanswer = "CLOSED"
+	};
+document.getElementById("thissunday").innerHTML = comingsundayanswer
+
+function getTimeRemaining() {
+  var t = new Date();
+  var seconds = 59-t.getSeconds();
+  var minutes = 59-t.getMinutes();
+  if (t.getHours() <= 9) {
+  	var hours = 9-t.getHours();
+  }
+  if (tokens[0] === "Sun") {
+	var hours = 31-t.getHours();
+  }
+  if (currHours > 9 && nth !== 4 && nth !== 2) {
+  	var hours = 23-t.getHours();
+  }
+  if (t.getHours() > 9 && tokens[0] !== "Sun") {
+  	var hours = 23-t.getHours();
+  }
+  return {
+    'total' : t,
+    'seconds' : seconds,
+    'minutes' : minutes,
+    'hours' : hours
+  }
+}
+function initializeClock(id) {
+  var clock = document.getElementById(id);
+  function updateClock(){
+    var t = getTimeRemaining();
+    clock.innerHTML = ('0' + t.hours).slice(-2) + ' : ' + ('0' + t.minutes).slice(-2) + ' : ' + ('0' + t.seconds).slice(-2);
+    if(t.total<=0) {
+    	clearInterval(timeinterval)
+    }
+  }
+  updateClock();
+  var timeinterval = setInterval(updateClock,1000);
+}
+initializeClock('clockdiv')
+initDay()
+
+</script>
+
+</body>
+
+
+</html>
