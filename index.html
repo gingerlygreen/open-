@@ -216,7 +216,7 @@ function getTimeRemaining() {
   if (t.getHours() <= 9) {
   	var hours = 9-t.getHours();
   }
-  if (tokens[0] === "Sun") {
+  if (tokens[0] === "Sun" && nth == 4 || nth == 2) {
 	var hours = 31-t.getHours();
   }
   if (currHours > 9 && nth !== 4 && nth !== 2) {
